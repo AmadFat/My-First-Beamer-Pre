@@ -6,13 +6,14 @@
 \date{\today}
 
 \usepackage{tikz}
-\usetikzlibrary{arrows, positioning}
+\usetikzlibrary{arrows, positioning, shadows, math}
 \usepackage{xeCJK}
 \usepackage{xcolor}
 \usepackage{colortbl}
 \usepackage{caption}
 \captionsetup[figure]{labelformat=simple, labelsep=period, name=Fig, font=tiny}
 \usepackage[numbers, sort&compress, super]{natbib}
+\usepackage{ragged2e}
 
 \AtBeginSection[] {
 \begin{frame}
@@ -28,6 +29,15 @@
 \definecolor{KeyBlue}{RGB}{28, 99, 216}
 \definecolor{Blue1}{RGB}{138, 175, 235}
 \definecolor{Blue2}{RGB}{196, 214, 245}
+
+\setbeamertemplate{footline}{
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=0.1\paperwidth,ht=2.25ex,dp=1mm,right]{}
+      \scriptsize\insertframenumber{} / \inserttotalframenumber% 当前页/总页数
+    \end{beamercolorbox}%
+  }
+}
 
 \begin{document}
 
@@ -441,19 +451,133 @@ node[pos=1, circle, fill=gray!30, inner sep=0.25mm] {};
 \section{Guidelines}
 
 \subsection{Safety}
-\begin{frame}
+\begin{frame}{Safety}
+
+\begin{block}{Work Flow}
+Safety Standard $\rightarrow$ Task Analysis $\rightarrow$ Risk Assessment $\rightarrow$ Role Assignment $\rightarrow$ Experiment Validation
+\end{block}
+
+\vspace{5mm}
+
+\begin{block}{Safety Features}
+\begin{itemize}
+\item \textbf{System monitoring} Real-time tracking and error report.
+\item \textbf{Power limation} Using softer materials and rounded edges.
+\item \textbf{Human guiding} Enabling low speed manual guiding.
+\end{itemize}
+\end{block}
+
 \end{frame}
 
 \subsection{pHRI}
-\begin{frame}
+\begin{frame}{Physical Human-Robot Interaction}
+
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{block}{Interaction Types}
+\begin{itemize}
+\item Accidental Contact
+\item Voluntary Contact
+\end{itemize}
+\end{block}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+\begin{block}{Compliance Design}
+\begin{itemize}
+\item Mechanical Compliance
+\item Control Compliance
+\end{itemize}
+\end{block}
+\end{column}
+\end{columns}
+
+\vspace{3mm}
+
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{block}{Contact Estimation}
+\begin{itemize}
+\item Sensorless Methods
+\item Sensor-Based Methods
+\end{itemize}
+\end{block}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+\begin{block}{Collision Mitigation}
+\begin{itemize}
+\item Short Range
+\item Long Range
+\end{itemize}
+\end{block}
+\end{column}
+\end{columns}
+
 \end{frame}
 
 \subsection{Human Activity}
-\begin{frame}
+\begin{frame}{Human Activity}
+
+\begin{block}{Core Principles}
+\begin{itemize}
+\item \textbf{Ergonomics} Role allocation and job assignment.
+\item \textbf{Trustness}  Interaction through intuitive interface.
+\item \textbf{Simplification} Carefully make operators and directional subtasks.
+\end{itemize}
+\end{block}
+
+\vspace{3mm}
+
+\begin{columns}
+\begin{column}{0.45\textwidth}
+\begin{block}{Task Planning}
+\begin{itemize}
+\item Offline Optimization
+\item Online Adaptation
+\end{itemize}
+\end{block}
+\end{column}
+
+\begin{column}{0.45\textwidth}
+\begin{block}{Key Challenges}
+\begin{itemize}
+\item Reality Intractablity
+\item Layout Dynamics
+\end{itemize}
+\end{block}
+\end{column}
+\end{columns}
+
 \end{frame}
 
 \section{Conclusion}
+\begin{frame}{Conclusion}
+\justifying
+HRC stands at the intersection of technological innovation and society need, offering unprecedented opportunities to enhance productivity, safety, and quality of life. While challenges in safety, adaptability, and ethical governance persist, the convergence of AI, sensor technology, and human-centered design positions HRC as a cornerstone of future automation. Future research must prioritize \textbf{scalable solutions}, \textbf{user-centric interfaces}, and \textbf{global standards} to unlock its full potential across industries and domains.
+\end{frame}
+
+\appendix
+
 \begin{frame}
+\centering
+\includegraphics[width=0.3\linewidth]{thanks.jpg};
+
+\vspace{5mm}
+
+\centering
+\small
+\hypersetup{urlcolor=blue}
+\textcolor{gray!50}{If you are interested in how this presentation was built, please go to}
+
+\centering
+\href{https://github.com/AmadFat/My-First-Beamer-Pre.git}{\textcolor{blue!50}{github.com/AmadFat/My-First-Beamer-Pre.git}}
+
+\centering
+\textcolor{gray!50}{If you find this work useful, please leave a star} 
+\huge
+\textcolor{yellow}{$\bigstar$}
+
 \end{frame}
 
 \appendix
