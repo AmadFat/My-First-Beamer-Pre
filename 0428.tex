@@ -2,7 +2,8 @@
 \usetheme{Antibes}
 \usecolortheme{whale}
 \title{Human-Robot Collaboration: A Survey} 
-\author{N/A}
+\author{Gao Lu\inst{1} \and Tan Meng\inst{1} \and Xu Jialin\inst{1} \\ Zhan Yuxin\inst{1} \and Zhang Ziye\inst{1}}
+\institute{\inst{1}School of Future Technology, Huazhong University of Science and Technology}
 \date{\today}
 
 \usepackage{tikz}
@@ -31,13 +32,11 @@
 \definecolor{Blue2}{RGB}{196, 214, 245}
 
 \setbeamertemplate{footline}{
-  \leavevmode%
-  \hbox{%
-    \begin{beamercolorbox}[wd=0.1\paperwidth,ht=2.25ex,dp=1mm,right]{}
-      \scriptsize\insertframenumber{} / \inserttotalframenumber% 当前页/总页数
-    \end{beamercolorbox}%
-  }
-}
+\leavevmode%
+\hbox{
+\begin{beamercolorbox}[wd=0.1\paperwidth,ht=2.25ex,dp=1mm,right]{}
+\scriptsize\insertframenumber{} / \inserttotalframenumber
+\end{beamercolorbox}}}
 
 \begin{document}
 
@@ -284,7 +283,7 @@ Rising Road of IC
 \begin{frame}{特种机器人}
 \setlength{\leftmargini}{0mm}
 \begin{itemize}
-\item 应用场景
+\item \textbf{应用场景}
 \smallskip
 \scriptsize\newline {特种机器人广泛应用于应急救援、安防、电力，以及油气化工等多个行业。机器人在执行危险任务、提高工作效率，以及保障人员安全等方面发挥着至关重要的作用。}
 \end{itemize}
@@ -317,7 +316,7 @@ Rising Road of IC
 \begin{frame}{特种机器人}
 \setlength{\leftmargini}{0mm}
 \begin{itemize}
-\item 优势
+\item \textbf{优势}
 \smallskip
 \smallskip
 \newline
@@ -412,39 +411,39 @@ node[pos=1, circle, fill=gray!30, inner sep=0.25mm] {};
 
 \scriptsize\item \textbf{感知与交互系统}
 \begin{itemize}
-\tiny{\item 配有 50多个传感器，包括：触摸传感器（全身感应触碰）、麦克风阵列（识别人声）、温度和光线传感器}
-\tiny{\item 360度摄像头用于空间感知和用户识别}
-\end{itemize}
-
-\scriptsize\item \textbf{情感计算与行为驱动}
-\begin{itemize}
-\tiny{\item 内置情感模型，可以模拟“害羞、开心、依赖”等行为状态}
-\tiny{\item 根据用户的互动频率和方式调整“情绪”，形成“依恋”关系}
-\end{itemize}
-
-\scriptsize\item \textbf{自我定位与导航技术}
-\begin{itemize}
-\tiny{\item 利用 SLAM（同步定位与建图）技术 在室内自主移动}
-\tiny{\item 避障系统使其可以灵活地在家庭环境中活动}
+\scriptsize{\item 配有 50多个传感器，包括：触摸传感器（全身感应触碰）、麦克风阵列（识别人声）、温度和光线传感器}
+\scriptsize{\item 360度摄像头用于空间感知和用户识别}
 \end{itemize}
 
 \scriptsize\item \textbf{AI芯片与边缘计算}
 \begin{itemize}
-\tiny{\item 内部采用高性能NVIDIA Jetson处理器进行本地计算，减少对云端依赖，提高隐私性与反应速度}
+\scriptsize{\item 内部采用高性能NVIDIA Jetson处理器进行本地计算，减少对云端依赖，提高隐私性与反应速度}
+\end{itemize}
+
+\scriptsize\item \textbf{情感计算与行为驱动}
+\begin{itemize}
+\scriptsize{\item 内置情感模型，可以模拟“害羞、开心、依赖”等行为状态}
+\scriptsize{\item 根据用户的互动频率和方式调整“情绪”，形成“依恋”关系}
+\end{itemize}
+
+\scriptsize\item \textbf{自我定位与导航技术}
+\begin{itemize}
+\scriptsize{\item 利用 SLAM（同步定位与建图）技术 在室内自主移动}
+\scriptsize{\item 避障系统使其可以灵活地在家庭环境中活动}
 \end{itemize}
 
 \scriptsize\item \textbf{云端连接与数据更新}
 \begin{itemize}
-\tiny{\item 通过Wi-Fi连接云平台，实现远程控制、行为日志记录、系统更新等功能}
+\scriptsize{\item 通过Wi-Fi连接云平台，实现远程控制、行为日志记录、系统更新等功能}
 \end{itemize}
 
 \end{enumerate}
 
 \begin{tikzpicture}[remember picture, overlay]
-\node[anchor=center] (image1) at ([shift={(18mm, -5mm)}] current page.center) {
-\includegraphics[width=0.22\textwidth]{family/4.png}};
-\node[anchor=center] (image2) at ([shift={(0.11\textwidth, 0mm)}] image1.east) {
-\includegraphics[width=0.22\textwidth]{family/5.png}};
+\node[anchor=center] (image1) at ([shift={(50mm, -10mm)}] current page.center) {
+\includegraphics[width=0.18\textwidth]{family/4.png}};
+\node[anchor=center] (image2) at ([shift={(0.0\textwidth, -0.09\textwidth)}] image1.south) {
+\includegraphics[width=0.18\textwidth]{family/5.png}};
 \end{tikzpicture}
 \end{frame}
 
@@ -561,7 +560,7 @@ HRC stands at the intersection of technological innovation and society need, off
 
 \begin{frame}
 \centering
-\includegraphics[width=0.3\linewidth]{thanks.jpg};
+\includegraphics[width=0.3\linewidth]{thanks.jpg}
 
 \vspace{5mm}
 
